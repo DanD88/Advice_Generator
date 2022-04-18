@@ -1,0 +1,73 @@
+
+:root {
+
+    --submit-btn: hsl(25, 97%, 53%);
+    --card-header: hsl(0, 0%, 100%);
+    --container-background: hsl(217, 12%, 63%);
+    --card-text: hsl(216, 12%, 54%);
+    --body-background: hsl(213, 19%, 18%);
+    --card: hsl(216, 72%, 23%);
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-background);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+    
+}
+
+.container .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 375px;
+    width: 375px;
+    background-color: var(--container-background);
+    border-radius: 20px;
+}
+
+.container .card h2 {
+    color: var(--card-header);
+}
+
+.container__roll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    
+}
+
+.dice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    background-color: green;
+    border-radius: 100%;
+}
+
+.dice img {
+    width: 30px;
+    height: 30px;
+    
+}
+
