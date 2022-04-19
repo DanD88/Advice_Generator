@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2? family= Manrope:wght@800 & family= Outfit:wght@300;400;600 & family= Poppins:ital,wght@0,100; 0,600;1,100;1,300 & family= Roboto:wght@300;400;500 & family= Rubik:wght@300;400;500 & display=swap');
 
 :root {
+    --btn: hsl(150, 100%, 66%);
+    --card-header: hsl(150, 100%, 66%);
 
-    --submit-btn: hsl(25, 97%, 53%);
-    --card-header: hsl(0, 0%, 100%);
     --container-background: hsl(217, 12%, 63%);
     --card-text: hsl(216, 12%, 54%);
     --body-background: hsl(213, 19%, 18%);
@@ -17,6 +18,7 @@
 
 body {
     background-color: var(--body-background);
+    font-family: 'Manrope', sans-serif;
 }
 
 .container {
@@ -35,7 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 375px;
-    width: 375px;
+    width: 550px;
     background-color: var(--container-background);
     border-radius: 20px;
 }
@@ -44,30 +46,59 @@ body {
     color: var(--card-header);
 }
 
-.container__roll {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0;
-    
+.advice__output {
+    margin: 50px 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    padding: 0 20px;
 }
 
-.dice {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+
+.btn {
+    position: absolute;
+    z-index: 0;
     height: 70px;
     width: 70px;
-    background-color: green;
+    background-color: var(--btn);
     border-radius: 100%;
+    border: none;
+    bottom: -30px;
+    cursor: pointer;
 }
 
-.dice img {
+.btn img {
     width: 30px;
     height: 30px;
     
+}
+
+@media only screen and (max-width: 1440px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .container .card {
+        margin: 10px;
+        width: 350px;
+    }
+
+    .seperator {
+        display: none;
+        width: 50%;
+    }
 }
 
