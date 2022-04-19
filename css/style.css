@@ -43,7 +43,7 @@ body {
 }
 
 .container .card h2 {
-    color: var(--card-header);
+    color: #000;
 }
 
 .advice__output {

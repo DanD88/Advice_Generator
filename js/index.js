@@ -1,28 +1,32 @@
 // API URL 
 
-const apiUrl = "https://api.adviceslip.com/advice"; 
-
-// function for fetching API 
-
-async function getApi(){
-    const Resp = await fetch(apiUrl);
-    let data = await Resp.json();
-    return data;
-}
-
-
-// Gets HTML elements 
+const advice__number = document.getElementById("advice__number");
+const advice__output = document.getElementById("advice__output");
+const roll__btn = document.getElementById("roll__btn");
 
 const getAdvice = () => {
-    Promise.resolve(getApi())
-    .then((data) => {
-        let adviceNumber = document.getElementById("advice");
-        let adviceText = document.getElementById("advice__output");
+    // advice__number.innerHTML = `Hello`;
+    // advice__output.innerHTML = ` `;
+    fetch("https://api.adviceslip.com/advice")
+      .then((res) => res.json())
+      .then((data) => {
+        advice__number.innerHTML = `Advice #${data.slip.id}`;
+        advice__output.innerHTML = `"${data.slip.advice}"`;
+        console.log(data);
+      });
+  };
+  
+  roll__btn.addEventListener("click", () => {
+    getAdvice();
+  });
+  
+  getAdvice();
+// fetch('https://api.adviceslip.com/advice')
+// .then(res => res.json())
+// .then(data => console.log(data))
 
-        adviceNumber.innerHTML = "ADVICE #" + data.slip.id;
-        adviceText.innerHTML = "\"" + data.slip.advice + "\""
-    })
-}
+// slip is advice
+// id is number
 
 
 
